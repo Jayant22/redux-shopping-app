@@ -7,7 +7,7 @@ import Cart from './components/Cart/Cart';
 import Layout from './components/Layout/Layout';
 import Products from './components/Shop/Products';
 
-let loadNumber = 1;
+let renderer = 1;
 
 function App() {
   const dispatch = useDispatch();
@@ -20,8 +20,8 @@ function App() {
   }, [dispatch]);
 
   useEffect(() => {
-    if (loadNumber <= 2) {
-      loadNumber++;
+    if (renderer <= 2) {
+      renderer++;
       return;
     }
     if (cart.changed) {
